@@ -3,8 +3,8 @@
 This code is a framework for general knowledge distillation for neural topic models based on the code of [Scholar+BAT](https://github.com/ahoho/kd-topic-models) and [CRCD](https://github.com/Lechatelia/CRCD)
 
 # Quick start
-[!Note]
-The file paths have been converted from absolute paths to relative paths for publication, which may cause errors. In this case, please rewrite the paths properly.
+>[!NOTE]
+>The file paths have been converted from absolute paths to relative paths for publication, which may cause errors. In this case, please rewrite the paths properly.
 
 ## 1. Create conda environment
 ```
