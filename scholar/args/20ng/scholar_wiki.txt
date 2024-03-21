@@ -1,0 +1,22 @@
+./data/20ng/aligned/dev
+--emb-dim 500
+--dev-metric npmi
+-k 50 
+--epochs 500
+--patience 150
+--batch-size 200 
+--background-embeddings ./scholar/outputs/20ng/teacher_weight/wiki_topic_500_emb_500_epoch_100/pretrained_emb.npy
+--device 0
+--dev-prefix dev
+-l 0.002 
+--alpha 0.5 
+--eta-bn-anneal-step-const 0.25 
+--runs 5  
+--save-z
+--save-eta
+--ext-counts-fpath ./data/gigaword/processed/train.npz  
+--ext-vocab-fpath ./data/gigaword/processed/train.vocab.json
+-o scholar/outputs/20ng/teacher_eta/wiki
+
+--test-counts-fpath ./data/20ng/aligned/dev/test.npz
+--test-vocab-fpat ./data/20ng/aligned/dev/train.vocab.json

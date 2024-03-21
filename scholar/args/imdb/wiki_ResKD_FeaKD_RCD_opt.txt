@@ -1,0 +1,30 @@
+data/imdb/processed-dev 
+--dev-metric npmi
+-k 50 
+--epochs 500 
+--patience 150
+--batch-size 60 
+--background-embeddings 
+--device 12
+--train-prefix train
+--dev-prefix dev 
+-l 0.002
+--alpha 0.5 
+--eta-bn-anneal-step-const 0.25 
+--teacher-eta-dirs scholar/outputs/imdb/teacher_eta/topic_500_emb_500_epoch_100
+--use-pseudo-doc 
+--doc-reconstruction-weight-list 0.97
+--doc-reconstruction-temp-list 2.52
+--teacher-embedding-dir scholar/outputs/imdb/teacher_eta/topic_500_emb_500_epoch_100/z.train.npy
+--feature-based-KD
+--FKD-temp 1.0
+--FKD-weight 11.7
+--RCD
+--RCD-weight 7.1
+--runs 5  
+--ext-counts-fpath data/gigaword/processed/train.npz  
+--ext-vocab-fpath data/gigaword/processed/train.vocab.json
+-o scholar/outputs/imdb/reskd_fkd_rcd/ntm_wiki_opt
+
+--test-counts-fpath data/imdb/processed-dev/test.npz
+--test-vocab-fpat data/imdb/processed-dev/train.vocab.json

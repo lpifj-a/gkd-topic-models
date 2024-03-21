@@ -1,0 +1,26 @@
+data/20ng/aligned/dev
+--dev-metric npmi
+-k 50 
+--epochs 500 
+--patience 150
+--batch-size 40 
+--background-embeddings 
+--device 13
+--train-prefix train
+--dev-prefix dev 
+-l 0.002
+--alpha 0.5 
+--eta-bn-anneal-step-const 0.25 
+
+--fkd-teacher-embedding-dir embeddings/llama_cpp/20ng/train_teacher_emb.npy
+--feature-based-KD
+--FKD-loss-function MSE
+
+--RCD
+--rcd-teacher-embedding-dir embeddings/llama_cpp/20ng/train_teacher_emb.npy
+
+--n-trials 15
+--storage crcd_20ng_feakd_mse_rcd_llama_optuna.db
+--study-name crcd_20ng_feakd_mse_rcd_llama_optuna
+
+-o scholar/outputs/imdb/optuna/fkd_rcd/llama_cpp

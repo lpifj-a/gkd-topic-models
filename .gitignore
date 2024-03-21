@@ -1,0 +1,26 @@
+# data
+## 20ng
+*.json
+*.jsonlist
+*.npz
+*.pkz
+*.npy
+*.pyc
+*.bin
+## bbc
+*.classes
+*.docs
+*.mtx
+*.terms
+## gigaword
+*.mat
+## imdb
+*.dat
+*.csv
+*.gz
+
+# embeddings
+*.gguf 
+
+# scholar
+*.pt

@@ -1,0 +1,23 @@
+data/bbc-processed
+--dev-metric npmi 
+-k 50  
+--emb-dim 500
+--epochs 1000  
+--patience 1000
+--batch-size 500 
+--background-embeddings scholar/outputs/bbc/teacher_weight/wiki_topic_500_emb_500_epoch_100/pretrained_emb.npy
+--device 1
+--train-prefix train
+--dev-prefix dev 
+-l 0.002 
+--alpha 0.5 
+--eta-bn-anneal-step-const 0.25 
+--save-eta
+--save-z
+--runs 5
+--ext-counts-fpath data/gigaword/processed/train.npz  
+--ext-vocab-fpath data/gigaword/processed/train.vocab.json
+-o scholar/outputs/bbc/teacher_eta/topic_500_emb_500_epoch_100
+
+--test-counts-fpath data/bbc-processed/test.npz
+--test-vocab-fpat data/bbc-processed/train.vocab.json
