@@ -39,7 +39,7 @@ cd data/imdb
 python data/imdb/create_dev_split.py
 ```
 
-### BBC
+#### BBC
 Download the preprocessed datasets from [this web page](http://mlg.ucd.ie/datasets/bbc.html) and place them in `data/bbc-processed/`. Then convert them to a format that can be trained by scholar
 ```
 python data/bbc-processed/convert_scholar_format.py
